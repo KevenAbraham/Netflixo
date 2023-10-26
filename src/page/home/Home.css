@@ -1,0 +1,56 @@
+.homeContainer {
+    height: 100vh;
+    background: url("../../img/toninho-bg.svg");
+    background-size: cover;
+}
+
+.homeContainer header {
+    padding: 42px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.homeContainer header button {
+    height: 40px;    
+    width: 110px;
+    font-size: 28px;
+    border-radius: 10px;
+    background-color: var(--vermelho);
+    color: #fff;
+    border: 1px solid #000;
+    margin-right: 109px;
+    cursor: pointer;
+}
+
+.homeText {
+    margin-top: 193px;    
+}
+
+.homeText h1, .homeText p, .homeText button {
+    color: #fff;
+    margin-left: 72px;
+    line-height: 0;
+}
+
+.homeText h1 {
+    font-size: 62px;
+}
+
+.homeText p {
+    padding: 20px;
+}
+
+.homeText p, .homeText button {
+    font-size: 28px;
+}
+
+.homeText button {
+    background-color: var(--vermelho);
+    height: 42px;    
+    width: 339px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+

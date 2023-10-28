@@ -1,16 +1,21 @@
 import './Home.css';
+import { Link } from 'react-router-dom';
 
-function Home() {
+export const Home = () => {
     return (
         <div className='homeContainer'>
             <header>
-                <button>Entrar</button>
+                <Link to="/login">
+                    <button>Entrar</button>
+                </Link>
             </header>
 
             <div className='homeText'>
                 <h1>Veja o que há de novo!</h1>
                 <p>Assista quando quiser, cancele quando quiser.</p>
-                <button>Criar conta agora</button>
+                <Link to="/cadastro">
+                    <button>Criar conta agora</button>
+                </Link>
             </div>
         </div>
     )

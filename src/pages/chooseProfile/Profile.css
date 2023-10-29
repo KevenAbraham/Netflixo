@@ -1,0 +1,50 @@
+.profileContainer {
+    height: 100vh;
+}
+
+.profileContainer header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 66px 0 33px;
+}
+
+.profileContainer header button {
+    height: 42px;
+    width: 126px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #FF3131;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.profileContainer h1 {
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 50px 0;
+}
+
+.profileContainer .content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contentCard .pfp {
+    height: 250px;
+    width: 250px;
+    background-color: #323232;
+    cursor: pointer;
+}
+
+.contentCard {
+    text-align: center;
+    font-size: 28px;
+    line-height: 0;
+    color: #fff;
+    text-decoration: none;
+}
+

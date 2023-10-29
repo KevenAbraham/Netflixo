@@ -1,11 +1,12 @@
 import './Login.css';
 import logo from '../../img/netflixologo.svg';
+import { Link } from 'react-router-dom';
 
 export const Login = () => {
     return (
         <div className='loginContainer'>
             <header>
-                <img src={logo} className='logo' alt='Voltar para a home' />
+                <Link to='/'><img src={logo} className='logo' alt='Voltar para a home' /></Link>
             </header>
 
             <div className='card'>
@@ -14,7 +15,7 @@ export const Login = () => {
                 <input type='text' className='input' placeholder='Insira o seu e-mail' />
                 <input type='password' className='input' placeholder='Insira a sua senha' />
 
-                <button>Entrar</button>
+                <Link to='/profile'><button>Entrar</button></Link>
 
                 <div className='aboveDButton'>
                     <div className='checkbox'>
@@ -24,7 +25,7 @@ export const Login = () => {
                     <p>Esqueceu a senha?</p>
                 </div>
 
-                <p className='new'>Não tem conta? Que tal <span>assinar agora?</span></p>
+                <p className='new'>Não tem conta? Que tal <Link to='/cadastro'><span>assinar agora?</span></Link></p>
 
             </div>
         </div>

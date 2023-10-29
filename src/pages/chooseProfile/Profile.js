@@ -8,7 +8,7 @@ export const Profile = () => {
             <header>
                 <img src={logo} alt='Voltar para a home' />
 
-                <Link to='/'>
+                <Link to='/content'>
                     <button>Sair</button>
                 </Link>
             </header>
@@ -16,19 +16,19 @@ export const Profile = () => {
             <h1>Quem vai assistir?</h1>
 
             <div className='content'>
-                <Link to='/'>
+                <Link to='/content'>
                     <div className='contentCard'>
                         <div className='pfp calabreso'></div>
                         <p>Calabreso</p>
                     </div>
                 </Link>
-                <Link to='/'>
+                <Link to='/content'>
                     <div className='contentCard'>
                         <div className='pfp samsungo'></div>
                         <p>Samsungo</p>
                     </div>
                 </Link>
-                <Link to='/'>
+                <Link to='/content'>
                     <div className='contentCard'>
                         <div className='pfp tilapio'></div>
                         <p>Tilápio</p>

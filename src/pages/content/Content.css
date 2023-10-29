@@ -1,0 +1,30 @@
+.contentContainer {
+    height: auto;
+}
+
+.contentContainer header {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentContainer header button {
+    height: 42px;
+    width: 126px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #FF3131;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.contentHome {
+    height: 80vh;
+    background: url(../../img/backgroundContent.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

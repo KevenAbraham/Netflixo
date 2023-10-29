@@ -8,7 +8,7 @@ export const Content = () => {
             <header>
                 <img src={logo} alt='Voltar para a home' />
 
-                <Link to='/content'>
+                <Link to='/'>
                     <button>Sair</button>
                 </Link>
             </header>

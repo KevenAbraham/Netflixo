@@ -4,7 +4,7 @@
 
 .contentContainer header {
     position: absolute;
-    width: 100vw;
+    width: 95vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,7 +19,6 @@
     font-size: 24px;
     color: #fff;
     cursor: pointer;
-    margin-right: 100px;
 }
 
 .contentHome {
@@ -27,4 +26,45 @@
     background: url(../../img/backgroundContent.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.videoContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: -120px 0 0 0;
+}
+
+.videoCards {
+    width: 365px;
+    height: 329px;
+    margin: 0 auto 34px auto;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.videoCards .thumb {
+    height: 212px;
+    background-color: #FF3131;
+    border-radius: 20px 20px 0 0;
+}
+
+.videoCards p {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 0;
+}
+
+.videoCards button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FF3131;
+    border-radius: 5px;
+    border: 1px solid #000;
+    color: #fff;
+    width: 132px;    
+    height: 35px;
+    font-size: 24px;
+    cursor: pointer;
 }

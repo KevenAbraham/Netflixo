@@ -13,7 +13,13 @@ export const Content = () => {
                 </Link>
             </header>
 
-            <div className='contentHome'></div>
+            <div className='contentHome'>
+                <div className='textArea'> 
+                    <h1>CALMA AI NETFLIXO</h1>
+                    <p>Confira o novo lançamento</p>
+                    <Link className='link' to='/'><button>Conferir</button></Link>
+                </div>
+            </div>
 
             <div className='videoContent'>
                 <div className='videoCards'>

@@ -68,3 +68,8 @@
     font-size: 24px;
     cursor: pointer;
 }
+
+
+.link {
+    text-decoration: none;
+}

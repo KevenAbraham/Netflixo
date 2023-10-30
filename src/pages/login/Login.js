@@ -15,7 +15,7 @@ export const Login = () => {
                 <input type='text' className='input' placeholder='Insira o seu e-mail' />
                 <input type='password' className='input' placeholder='Insira a sua senha' />
 
-                <Link to='/profile'><button>Entrar</button></Link>
+                <Link className='link' to='/profile'><button>Entrar</button></Link>
 
                 <div className='aboveDButton'>
                     <div className='checkbox'>

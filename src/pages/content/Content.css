@@ -26,6 +26,37 @@
     background: url(../../img/backgroundContent.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.contentHome .textArea {
+    margin-left: 100px;
+    margin-top: -100px;
+}
+
+.textArea h1 {
+    color: #FFF;
+    font-size: 64px;
+    width: 400px;
+}
+
+.textArea p {
+    color: #fff;
+    font-size: 32px;
+    width: 400px;
+}
+
+.textArea button {
+    padding: 12px 22px;
+    background-color: #FF3131;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    outline: 0;
+    border: 1px solid #000;
+    cursor: pointer;
 }
 
 .videoContent {

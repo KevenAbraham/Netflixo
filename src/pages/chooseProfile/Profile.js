@@ -13,7 +13,7 @@ export const Profile = () => {
                 </Link>
             </header>
 
-            <h1>Quem vai assistir?</h1>
+            <h1>Escolha o perfil que mais combina com você!</h1>
 
             <div className='content'>
                 <Link className='link' to='/content'>

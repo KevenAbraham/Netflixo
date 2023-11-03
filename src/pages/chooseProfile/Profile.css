@@ -50,3 +50,23 @@
 .link {
     text-decoration: none;
 }
+
+.calabreso {
+    background: url(../../img/calabreso.png);
+    background-size: cover;
+}
+
+.samsungo {
+    background: url(../../img/samsungo.png);
+    background-size: cover;
+}
+
+.tilapio {
+    background: url(../../img/tilapio.png);
+    background-size: cover;
+}
+
+.linguico {
+    background: url(../../img/linguiço.png);
+    background-size: cover;
+}

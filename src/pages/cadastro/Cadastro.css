@@ -9,7 +9,7 @@
     margin-left: 33px;
 }
 
-.signUpContainer .card {
+.card {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -27,7 +27,7 @@
     margin-top: 40px;
 }
 
-.signUpContainer .card .input {
+.card .input {
     display: block;
     height: 62px;
     width: 90%;

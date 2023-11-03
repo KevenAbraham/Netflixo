@@ -11,9 +11,11 @@ export const Login = () => {
 
             <div className='card'>
                 <h1>Entrar</h1>
-                
-                <input type='text' className='input' placeholder='Insira o seu e-mail' />
-                <input type='password' className='input' placeholder='Insira a sua senha' />
+
+                <div className='inputsArea'>
+                    <input type='text' className='input' placeholder='Insira o seu e-mail' />
+                    <input type='password' className='input' placeholder='Insira a sua senha' />
+                </div>                
 
                 <Link className='link' to='/profile'><button>Entrar</button></Link>
 

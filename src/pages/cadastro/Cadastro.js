@@ -15,7 +15,7 @@ export const Cadastro = () => {
     e.preventDefault();
 
         try {
-            const response = await axios.post('/api/usuarios', {
+            const response = await axios.post('https://web-ek0w5pnhkp3k.up-de-fra1-1.apps.run-on-seenode.com/logins', {
                 nome,
                 email,
                 senha,

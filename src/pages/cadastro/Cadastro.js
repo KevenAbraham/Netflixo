@@ -6,45 +6,61 @@ import axios from 'axios';
 import Modal from 'react-modal';
 
 export const Cadastro = () => {
+
     const navigate = useNavigate();
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
-    const handleCadastroConcluido = () => {
-        setModalIsOpen(true);
-    };
-
     const handleFecharModal = () => {
         setModalIsOpen(false);
-        navigate('/profile'); // Redirecione após o fechamento do modal
+        navigate('/login'); // Redirecione após o fechamento do modal
     };
 
-    const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
-    const [senha, setSenha] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
 
-    const handleSubmit = async (e) => {
+    const handleSignup = async (e) => {
         e.preventDefault();
 
         try {
+            // Verificar se a senha e a confirmação de senha são iguais
+            if (password !== confirmPassword) {
+                setErrorMessage('A senha e a confirmação de senha não coincidem');
+                return;
+            }
+
             const response = await axios.post('https://web-ek0w5pnhkp3k.up-de-fra1-1.apps.run-on-seenode.com/logins', {
-                nome,
                 email,
-                senha,
+                senha: password,
             });
 
-            if (response.status === 201) {
-                // Cadastro bem-sucedido
-                // navigate('/profile'); // Redirecione o usuário para uma página de sucesso ou faça o que for necessário
-                handleCadastroConcluido();
-            } else {
-                // Trate erros de acordo com a resposta do servidor
-            }
+            console.log('Usuário cadastrado com sucesso:', response.data);
+
+            setModalIsOpen(true);
+
+            // Lógica para redirecionar o usuário após o cadastro
         } catch (error) {
-            console.error(error);
+            if (error.response) {
+                // O servidor retornou uma resposta com um status diferente de 2xx
+                if (error.response.status === 400) {
+                    // Código específico para lidar com o erro 400 (por exemplo, e-mail duplicado)
+                    setErrorMessage('E-mail já cadastrado. Por favor, escolha outro.');
+                } else {
+                    // Outros códigos de erro do servidor
+                    setErrorMessage('Erro ao cadastrar usuário. Tente novamente mais tarde.');
+                }
+            } else if (error.request) {
+                // A solicitação foi feita, mas não recebeu resposta
+                setErrorMessage('Erro na solicitação. Tente novamente mais tarde.');
+            } else {
+                // Erro durante a configuração da solicitação
+                setErrorMessage('Erro ao cadastrar usuário. Tente novamente mais tarde.');
+            }
         }
-    }
+    };
 
     useEffect(() => {
         if (modalIsOpen) {
@@ -62,15 +78,8 @@ export const Cadastro = () => {
             <div className='card'>
                 <h1>Cadastrar</h1>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSignup}>
                     <div className='inputsArea'>
-                        <input
-                            type='text'
-                            name='nome'
-                            placeholder='Insira o seu nome'
-                            value={nome}
-                            onChange={(e) => setNome(e.target.value)}
-                        />
                         <input
                             type='email'
                             name='email'
@@ -82,10 +91,19 @@ export const Cadastro = () => {
                             type='password'
                             placeholder='Insira a sua senha'
                             name='senha'
-                            value={senha}
-                            onChange={(e) => setSenha(e.target.value)}
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <input
+                            type='password'
+                            placeholder='Insira a sua senha novamente'
+                            name='senha'
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
                         />
                     </div>
+
+                    {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
 
                     {/* <Link className='link' to='/profile'> */}
                     <button type='submit'>Cadastrar</button>

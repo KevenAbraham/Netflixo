@@ -84,7 +84,7 @@ export const Cadastro = () => {
                     <div className='inputsArea'>
                         <input
                             type='text'
-                            name='name'
+                            name='nome'
                             placeholder='Insira o seu nome'
                             value={nome}
                             onChange={(e) => setNome(e.target.value)}

@@ -16,6 +16,7 @@ export const Cadastro = () => {
         navigate('/login'); // Redirecione após o fechamento do modal
     };
 
+    const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -33,6 +34,7 @@ export const Cadastro = () => {
             }
 
             const response = await axios.post('https://web-ek0w5pnhkp3k.up-de-fra1-1.apps.run-on-seenode.com/logins', {
+                nome,
                 email,
                 senha: password,
             });
@@ -80,6 +82,13 @@ export const Cadastro = () => {
 
                 <form onSubmit={handleSignup}>
                     <div className='inputsArea'>
+                        <input
+                            type='text'
+                            name='name'
+                            placeholder='Insira o seu nome'
+                            value={nome}
+                            onChange={(e) => setNome(e.target.value)}
+                        />
                         <input
                             type='email'
                             name='email'

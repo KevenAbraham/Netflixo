@@ -13,13 +13,11 @@ export const Cadastro = () => {
 
     const handleFecharModal = () => {
         setModalIsOpen(false);
-        navigate('/login'); // Redirecione após o fechamento do modal
+        navigate('/profile'); // Redirecione após o fechamento do modal
     };
 
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
 
@@ -27,16 +25,9 @@ export const Cadastro = () => {
         e.preventDefault();
 
         try {
-            // Verificar se a senha e a confirmação de senha são iguais
-            if (password !== confirmPassword) {
-                setErrorMessage('A senha e a confirmação de senha não coincidem');
-                return;
-            }
-
             const response = await axios.post('https://web-ek0w5pnhkp3k.up-de-fra1-1.apps.run-on-seenode.com/logins', {
                 nome,
                 email,
-                senha: password,
             });
 
             console.log('Usuário cadastrado com sucesso:', response.data);
@@ -49,7 +40,7 @@ export const Cadastro = () => {
                 // O servidor retornou uma resposta com um status diferente de 2xx
                 if (error.response.status === 400) {
                     // Código específico para lidar com o erro 400 (por exemplo, e-mail duplicado)
-                    setErrorMessage('E-mail já cadastrado. Por favor, escolha outro.');
+                    setErrorMessage('E-mail inválido. Preencha o campo novamente!');
                 } else {
                     // Outros códigos de erro do servidor
                     setErrorMessage('Erro ao cadastrar usuário. Tente novamente mais tarde.');
@@ -83,6 +74,7 @@ export const Cadastro = () => {
                 <form onSubmit={handleSignup}>
                     <div className='inputsArea'>
                         <input
+                            className='input'
                             type='text'
                             name='nome'
                             placeholder='Insira o seu nome'
@@ -90,25 +82,12 @@ export const Cadastro = () => {
                             onChange={(e) => setNome(e.target.value)}
                         />
                         <input
+                            className='input'
                             type='email'
                             name='email'
                             placeholder='Insira o seu e-mail'
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                        />
-                        <input
-                            type='password'
-                            placeholder='Insira a sua senha'
-                            name='senha'
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                        <input
-                            type='password'
-                            placeholder='Insira a sua senha novamente'
-                            name='senha'
-                            value={confirmPassword}
-                            onChange={(e) => setConfirmPassword(e.target.value)}
                         />
                     </div>
 

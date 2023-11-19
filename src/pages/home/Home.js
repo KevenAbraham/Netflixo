@@ -5,8 +5,8 @@ export const Home = () => {
     return (
         <div className='homeContainer'>
             <header>
-                <Link to="/login">
-                    <button>Entrar</button>
+                <Link to="/profile">
+                    <button>Assistir agora</button>
                 </Link>
             </header>
 

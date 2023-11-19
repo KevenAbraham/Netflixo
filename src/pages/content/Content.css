@@ -104,3 +104,33 @@
 .link {
     text-decoration: none;
 }
+
+.vid1 {
+    background: url(../../img/bg1.jpg);
+    background-size: cover;
+}
+
+.vid2 {
+    background: url(../../img/bg2.jpg);
+    background-size: cover;
+}
+
+.vid3 {
+    background: url(../../img/bg3.jpg);
+    background-size: cover;
+}
+
+.vid4 {
+    background: url(../../img/bg4.jpg);
+    background-size: cover;
+}
+
+.vid5 {
+    background: url(../../img/bg5.jpg);
+    background-size: cover;
+}
+
+.vid6 {
+    background: url(../../img/bg6.jpg);
+    background-size: cover;
+}

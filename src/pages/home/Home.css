@@ -12,8 +12,7 @@
 }
 
 .homeContainer header button {
-    height: 40px;    
-    width: 110px;
+    height: 50px;
     font-size: 28px;
     border-radius: 10px;
     background-color: var(--vermelho);
@@ -47,7 +46,7 @@
 
 .homeText button {
     background-color: var(--vermelho);
-    height: 42px;    
+    height: 50px;
     width: 339px;
     border-radius: 10px;
     border: 1px solid #000;

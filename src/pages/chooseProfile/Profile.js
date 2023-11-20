@@ -34,7 +34,7 @@ export const Profile = () => {
                         <p>Tilápio</p>
                     </div>
                 </Link>
-                <Link className='link' to='/'>
+                <Link className='link' to='/content'>
                     <div className='contentCard'>
                         <div className='pfp linguico'></div>
                         <p>Linguiço</p>

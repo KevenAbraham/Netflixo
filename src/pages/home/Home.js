@@ -12,9 +12,9 @@ export const Home = () => {
 
             <div className='homeText'>
                 <h1>Veja o que há de novo!</h1>
-                <p>Assista quando quiser, cancele quando quiser.</p>
+                <p>Gostaria de receber e-mails sobre lançamentos futuros?</p>
                 <Link to="/cadastro">
-                    <button>Criar conta agora</button>
+                    <button>Gostaria!</button>
                 </Link>
             </div>
         </div>
